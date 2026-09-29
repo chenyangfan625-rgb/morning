@@ -1,0 +1,101 @@
+{
+  "updatedDate": "2026-09-29",
+  "paperNote": "截至 2026-09-29 检索，arXiv 已公布 9 月 28 日批次；本期精选论文均于 9 月 25 日实际提交，并在 9 月 28 日工作日批次公开。除 Mutable Transcripts 已被 NeurIPS 2026 接收外，其余均为尚待同行评议的预印本，摘要数值均为作者报告结果。",
+  "scheduleLabel": "已设置每天早上更新 · 北京时间 8:00 前后约一小时",
+  "news": [
+    {
+      "tag": "AI 安全 · 国际观点",
+      "date": "2026-09-28",
+      "source": "Reuters",
+      "title": "教皇 Leo 呼吁严肃对待 AI 毁灭性风险讨论",
+      "summary": "据路透社报道，教皇 Leo 表示，专家关于 AI 可能造成严重乃至生存风险的担忧不应被简单视为“假新闻”，并批评反对任何安全护栏的科技领袖。他主张继续国际对话、研究与负责任创新；这是公共立场与政策倡议，并非新的技术证据或监管决定。",
+      "url": "https://www.reuters.com/world/europe/pope-leo-says-concerns-about-ai-doom-are-not-fake-news-2026-09-28/"
+    },
+    {
+      "tag": "前沿模型 · 资本市场",
+      "date": "2026-09-28",
+      "source": "Reuters",
+      "title": "Anthropic 招股材料披露其迈向前沿 AI 实验室首次上市的路径",
+      "summary": "路透社梳理了 Anthropic 招股材料及其从 2021 年成立到申请上市的发展路径，显示前沿模型竞争正进一步进入公开资本市场。报道中的估值、收入预测与长期经济影响属于公司材料和市场预期，不能视为已实现结果。",
+      "url": "https://www.reuters.com/technology/anthropics-path-ai-startup-industry-defining-ipo-2026-09-28/"
+    },
+    {
+      "tag": "智能体安全 · 评论分析",
+      "date": "2026-09-28",
+      "source": "Reuters Breakingviews",
+      "title": "Nvidia 推出限制和监控智能体行为的安全工具",
+      "summary": "Reuters Breakingviews 评论称，Nvidia 推出开源框架 OpenShell 与面向 BlueField 处理器的 Sentry，用于限制智能体权限、监测异常并在必要时终止行为。工具发布本身已确认，但其能否普遍阻止真实攻击尚未得到独立验证；文章同时指出 Nvidia 推动安全采用也具有扩大算力需求的商业动机。",
+      "url": "https://www.reuters.com/commentary/breakingviews/jensen-huangs-invisible-hand-is-tied-ai-safety-2026-09-28/"
+    },
+    {
+      "tag": "智能体生态 · 已确认发布",
+      "date": "2026-09-25",
+      "source": "Anthropic / Claude",
+      "title": "Claude 开放插件目录提交入口，并提供审核与使用分析",
+      "summary": "Anthropic 为付费 Claude 开发者开放插件目录提交门户，可提交远程 MCP 连接器或由 MCP、Agent Skills 等组成的插件包；平台会自动校验和安全扫描，并在发布后提供安装量与搜索曝光分析。本条为近期保留资讯，日期已明确标注。",
+      "url": "https://claude.com/blog/build-plugins-for-claude"
+    }
+  ],
+  "papers": [
+    {
+      "tag": "大模型 · 推理效率",
+      "date": "2026-09-25",
+      "title": "不直接惩罚长度，仅训练置信度能否让推理模型更早停下？",
+      "english": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
+      "authors": "Parsa Hosseini, Akasha Tigalappanavara, Sumit Nawathe, Chenrui Fan, Sourya Basu, Genta Indra Winata, Anirban Das, Soheil Feizi, Nima Chitsazan",
+      "status": "arXiv 预印本",
+      "summary": "研究仅用 600 个训练问题，让模型在自身推理轨迹的中间位置预测答案置信度；训练目标不包含长度、效率或停止奖励，推理时也不额外触发早停。作者报告，在 Gemma、Qwen、Nemotron 和 GPT-OSS 的数学、科学与编程基准上，匹配准确率时最多减少 25% 的生成 token。",
+      "takeaway": "阅读关注：元认知监督可能间接带来推理效率，但需核查不同任务上的绝对准确率、训练成本，以及模型是否只是更早形成过度自信。",
+      "url": "https://arxiv.org/abs/2609.31619",
+      "pdf": "https://arxiv.org/pdf/2609.31619"
+    },
+    {
+      "tag": "多智能体 · 规模效应",
+      "date": "2026-09-25",
+      "title": "增加智能体数量为何不一定提升团队决策？",
+      "english": "Multi-agent Scaling Across Disjunctive and Compensatory Tasks",
+      "authors": "Carolina Fortuna, Blaz Bertalanic",
+      "status": "arXiv 预印本",
+      "summary": "论文用 Steiner 群体任务分类分析 13 个开放权重模型、最多 30 个智能体的团队扩展。作者报告，在析取型任务中“至少一个答对”的概率随规模增加 5–20 个百分点，但多数投票几乎没有兑现该潜力；多轮修订的收益与拥有 1 个还是 29 个同伴近似。Fermi 估计中，共享偏差占平方误差约 87%，平均化仅把误差降低约 6%。",
+      "takeaway": "阅读关注：团队规模不是充分条件，任务结构和输出聚合机制决定收益；这可直接用于 LLM-MAS 设计与组织决策类实验。",
+      "url": "https://arxiv.org/abs/2609.31563",
+      "pdf": "https://arxiv.org/pdf/2609.31563"
+    },
+    {
+      "tag": "人机协作 · 对话状态",
+      "date": "2026-09-25",
+      "title": "允许用户修改旧对话，能否减少过时信息持续影响模型？",
+      "english": "Mutable Transcripts: Mitigating Context Pollution through Editable Conversation State",
+      "authors": "Dan Barry, Andrew Hines",
+      "status": "arXiv 预印本；NeurIPS 2026 已接收",
+      "summary": "论文提出“可变对话记录”，允许用户通过自然语言编辑请求直接修改历史轮次，而不是不断追加纠正信息。一个含 17 名参与者的受控研究显示，用户在清晰度、信心和易用性上显著偏好该方案，也更少想重新开始会话；示例分析显示其可缩短对话并移除过时上下文。",
+      "takeaway": "阅读关注：结果直接关联持续人机协作中的状态管理，但样本很小，尚不足以说明长期任务表现或复杂组织场景中的稳健性。",
+      "url": "https://arxiv.org/abs/2609.31354",
+      "pdf": "https://arxiv.org/pdf/2609.31354"
+    },
+    {
+      "tag": "人机协作 · 政策协商",
+      "date": "2026-09-25",
+      "title": "模拟利益相关者与形式化论证能否改善人机政策审议？",
+      "english": "OmouAI: Argumentative Human-AI Policy Deliberation with Simulated Personas",
+      "authors": "Stylianos Loukas Vasileiou, Antonio Rago, William Yeoh, Georgina Curto",
+      "status": "arXiv 预印本",
+      "summary": "OmouAI 让不同模拟角色生成政策论点，并将人类和智能体观点组织为共享论证框架；用户可以质疑、补充或修改论点，系统再用确定性的论证语义对照联合国可持续发展目标等外部目标进行评估。其核心贡献是系统设计与可追溯解释机制，摘要未报告受控用户实验效果。",
+      "takeaway": "阅读关注：模拟角色不等同于真实利益相关者；对 LLM-ABM 而言，价值在于把可审计的论证结构与人类监督嵌入仿真，而不是宣称预测真实政策反应。",
+      "url": "https://arxiv.org/abs/2609.31078",
+      "pdf": "https://arxiv.org/pdf/2609.31078"
+    },
+    {
+      "tag": "管理研究 · LLM 测量",
+      "date": "2026-09-25",
+      "title": "同一公司文本交给不同 LLM，为何会产生不同的实证变量？",
+      "english": "Same Text, Different Numbers: The Divergence of LLM-Based Measures",
+      "authors": "Hamid Boustanifar, Sasan Mansouri",
+      "status": "arXiv 预印本",
+      "summary": "研究让 7 个不同提供商的 LLM 对标普 500 公司业绩电话会文本生成 13 类变量。作者报告，跨模型秩相关平均仅 0.52，共同的文本层差异只解释 34% 的总评分变异；更换模型还会改变下游回归系数的大小、符号与显著性。跨提供商平均可稳定多数变量的排序，但分数水平仍依赖模型组合。",
+      "takeaway": "阅读关注：这对管理与信息系统实证研究非常关键——LLM 生成变量应被视为模型依赖的测量，并进行跨模型验证、集合稳健性和构念效度检验。",
+      "url": "https://arxiv.org/abs/2609.31013",
+      "pdf": "https://arxiv.org/pdf/2609.31013"
+    }
+  ]
+}
