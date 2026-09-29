@@ -1,8 +1,8 @@
 {
   "model": "deepseek-flash",
-  "news_limit": 8,
+  "news_limit": 12,
   "paper_limit": 5,
-  "lookback_days": 2,
+  "lookback_days": 7,
   "official_domains": [
     "openai.com",
     "anthropic.com",
@@ -54,12 +54,42 @@
     {
       "type": "html",
       "url": "https://synchron.com/news",
-      "article_pattern": "^/news/[^/]+/?$"
+      "article_pattern": "^/news/[^/]+/?$",
+      "release_pattern": "synchron"
     },
     {
       "type": "html",
       "url": "https://www.paradromics.com/news",
       "article_pattern": "^/(news|blog)/[^/]+/?$"
+    },
+    {
+      "type": "html",
+      "url": "https://www.precisionneuro.io/articles/company-news",
+      "article_pattern": "^/articles/company-news/[^/]+/?$",
+      "release_pattern": "precision-neuroscience"
+    },
+    {
+      "type": "html",
+      "url": "https://mistral.ai/news",
+      "article_pattern": "^/news/[^/]+/?$"
+    },
+    {
+      "type": "html",
+      "url": "https://www.microsoft.com/en-us/ai/blog/",
+      "article_pattern": "^/en-us/ai/blog/[0-9]{4}/"
     }
+  ],
+  "news_target": 10,
+  "articles_per_source": 16,
+  "candidate_limit": 36,
+  "bci_domains": [
+    "neuralink.com",
+    "synchron.com",
+    "precisionneuro.io",
+    "paradromics.com"
+  ],
+  "release_domains": [
+    "globenewswire.com",
+    "businesswire.com"
   ]
 }
