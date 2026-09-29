@@ -1,0 +1,10 @@
+{
+  "model": "gpt-5-mini",
+  "news_limit": 8,
+  "paper_limit": 5,
+  "lookback_days": 2,
+  "official_domains": ["openai.com", "anthropic.com", "claude.com", "blog.google", "deepmind.google", "ai.google.dev", "microsoft.com", "nvidia.com", "mistral.ai", "deepseek.com", "qwen.ai", "neuralink.com", "synchron.com", "precisionneuro.io", "paradromics.com"],
+  "topics": ["大模型、智能体和人机协作", "OpenAI及其他公司API、Token价格、缓存计费、额度、上下文窗口和速率限制调整", "AI芯片、机器人及重要产品发布", "Neuralink、Synchron、Precision Neuroscience、Paradromics等脑机接口公司的研究和产品动态"],
+  "arxiv_query": "(cat:cs.AI OR cat:cs.CL OR cat:cs.HC OR cat:cs.MA) AND (all:\"large language model\" OR all:\"human AI\" OR all:agent)",
+  "arxiv_max_results": 50
+}
