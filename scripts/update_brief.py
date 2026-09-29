@@ -269,7 +269,7 @@ def main():
                    f'新闻选择最近{cfg["lookback_days"]}天内AI公司、模型API/Token计费、智能体、芯片、机器人、脑机接口动态，目标{cfg["news_target"]}条，最多{cfg["news_limit"]}条；'
                    '有合格脑机接口候选时优先选取最多4条，其他公司尽量分散，同一公司通常不超过3条。不得为凑数量编造，无脑机接口新闻则说明。'
                    'date和url必须逐字复制候选项，不能编造价格或把临床试验当上市批准。'
-                   '论文选择3至5篇，不足则少选，只根据摘要写结论和局限，不推断同行评议状态。'
+                   '论文选择5至8篇，不足则少选，只根据摘要写结论和局限，不推断同行评议状态。'
                    '每条摘要80至150字；没有符合条件的项目用空数组。',
         'required_json_schema': SCHEMA, 'news_candidates': news, 'paper_candidates': papers}
     generated = api_call({'model': model, 'max_tokens': 8000,
