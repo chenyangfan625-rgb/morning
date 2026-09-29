@@ -1,7 +1,7 @@
 {
   "model": "deepseek-flash",
   "news_limit": 12,
-  "paper_limit": 5,
+  "paper_limit": 8,
   "lookback_days": 7,
   "official_domains": [
     "openai.com",
