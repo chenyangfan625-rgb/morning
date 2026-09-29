@@ -1,15 +1,52 @@
 {
   "updatedDate": "2026-09-29",
-  "paperNote": "AI辅助摘要，点击公司官方原文或论文核对；论文日期为arXiv首次提交日期，近期补读单独标注。 官网定向抓取覆盖有限；无新条目不代表全网无更新。",
+  "paperNote": "AI辅助摘要，点击公司官方原文或论文核对；论文日期为arXiv首次提交日期，近期补读单独标注。 资讯回看最近7天，目标10条、最多12条；不足时按实际核实数量展示。官网定向抓取覆盖有限。 本次未选出可核实的近一周脑机接口公司公告。",
   "scheduleLabel": "GitHub 自动晨读 · 北京时间约 08:17 更新（可能延迟）",
   "news": [
     {
-      "tag": "AI",
+      "tag": "AI公司",
+      "date": "2026-09-23",
+      "source": "Anthropic",
+      "title": "Claude发现具CRISPR样重复序列的新型酶系统",
+      "summary": "Anthropic宣布成立生命科学研究团队并公布早期成果：约950个Claude智能体在21小时内检索海量DNA序列，消耗约2.1亿token，识别出一种与DNA重复序列关联的新型逆转录酶系统，其特性类似CRISPR，此前未获系统描述；所有实验由人类科学家完成，预印本已公开。",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "company_url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+    },
+    {
+      "tag": "AI公司",
       "date": "2026-09-28",
-      "source": "Google Blog",
-      "title": "The Gifted wins Future Vision XPRIZE",
-      "summary": "谷歌与XPRIZE及Range Media Partners合作的Future Vision XPRIZE公布结果，独立电影人Jeff Synthesized凭《The Gifted》获大奖。影片讲述一名11岁男孩出于爱用代码重建已故母亲的声音与存在，其影响悄然惠及整个社区网络。该片从全球2500多件投稿中选出，作者获10万美元奖金及250万美元长片制作资助，并将通过谷歌100 ZEROS计划推向大银幕。",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize"
+      "source": "Mistral",
+      "title": "Mistral在慕尼黑设立德国中心，推进工业AI",
+      "summary": "Mistral宣布在慕尼黑设立德国中心，聚焦物理AI与工业AI，并计划到2030年在欧洲建设1吉瓦算力。其模型为开放权重，可在客户自有基础设施上运行。慕尼黑团队将与宝马合作碰撞仿真与工程AI，与西门子能源开展工业AI应用，并与慕尼黑工业大学合作汽车空气动力学数字孪生研究。",
+      "url": "https://mistral.ai/news/hallo-deutschland",
+      "company_url": "https://mistral.ai/news/hallo-deutschland"
+    },
+    {
+      "tag": "机器人",
+      "date": "2026-09-22",
+      "source": "NVIDIA",
+      "title": "NVIDIA发布Isaac ROS 5.0，推进智能体化开源机器人开发",
+      "summary": "NVIDIA在ROSCon发布Isaac ROS 5.0，支持ROS Lyrical与Ubuntu 24.04，引入面向AI智能体的开发工作流、可复用技能与智能体友好文档。新增FoundationStereo微调技能，FoundationPose推理库使物体位姿估计与追踪最高快5.5倍，并支持从Jetson Orin Nano到Jetson Thor的部署。",
+      "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics",
+      "company_url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics"
+    },
+    {
+      "tag": "AI模型",
+      "date": "2026-09-23",
+      "source": "NVIDIA",
+      "title": "NVIDIA与东南亚伙伴在新加坡AI Day展示本地化AI进展",
+      "summary": "在新加坡AI Day上，NVIDIA与东南亚伙伴展示区域落地进展：新加坡HTX将研究Nemotron 3 Super与Nemotron 3 Nano Omni用于公共安全，越南Viettel AI微调Nemotron 3 Super以提升越南语与智能体能力，泰国、马来西亚、文莱等地也在适配；Sea Limited成为东盟首个采用NVIDIA Vera Rubin平台的企业。",
+      "url": "https://blogs.nvidia.com/blog/ai-day-singapore",
+      "company_url": "https://blogs.nvidia.com/blog/ai-day-singapore"
+    },
+    {
+      "tag": "AI科研",
+      "date": "2026-09-24",
+      "source": "NVIDIA",
+      "title": "NVIDIA等发布2800余种病毒蛋白复合物预测结构开放数据集",
+      "summary": "NVIDIA联合Google DeepMind、EMBL-EBI等机构发布开放数据集，使用AlphaFold2并借助NVIDIA BioNeMo预测2800多种病毒的蛋白复合物三维结构并纳入AlphaFold数据库，其中约30%的相互作用为科学界首次记录。NVIDIA同时开源生成该数据集所用的BioNeMo结构预测流水线。",
+      "url": "https://blogs.nvidia.com/blog/open-protein-dataset",
+      "company_url": "https://blogs.nvidia.com/blog/open-protein-dataset"
     }
   ],
   "papers": [
@@ -19,22 +56,10 @@
       "date": "2026-09-28",
       "url": "https://arxiv.org/abs/2609.35760v1",
       "pdf": "https://arxiv.org/pdf/2609.35760v1",
-      "tag": "Token计费",
-      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
-      "summary": "论文提出TokenCast，为智能体执行的每个片段学习可组合的成本表示，记录自身消耗及其引入的上下文增长，组合相邻片段即可给出累计token预测，并随执行推进用新证据刷新，且无需额外模型调用。在SWE-bench Verified上平均累计预测耗时32.8毫秒；跨4个任务套件与6个模型，96个组合中平均绝对误差相对最强基线平均降低14.5%；离线预算控制回放中比固定预算策略平均少用21.3%的token。",
-      "takeaway": "执行前难以预测的token总消耗可被分段建模并在线刷新，用于预算控制。",
-      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
-    },
-    {
-      "english": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
-      "authors": "Emiliano Penaloza, Dane Malenfant, Dheeraj Vattikonda, Roger Creus Castanyer, Siddarth Venkatraman, Abhay Puri, Jonathan Light, Matthew James Sargent, Augustine N. Mavor-Parker, Massimo Caccia, Lucas Caccia, Glen Berseth, Esmeralda S. Whitammer, Alessandro Sordoni, Minseon Kim, Marc-Alexandre Côté, Laurent Charlin, Guillaume Lajoie",
-      "date": "2026-09-28",
-      "url": "https://arxiv.org/abs/2609.35750v1",
-      "pdf": "https://arxiv.org/pdf/2609.35750v1",
-      "tag": "智能体训练",
-      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
-      "summary": "论文提出KV-streams，一种可插拔的上下文压缩策略：不再在每次压缩后清空KV缓存，而是将其向前流式传递，从而在保持显存恒定的同时提高训练吞吐。该方法支持三种压缩策略，实现2.6至5倍墙钟训练加速，且未显示出损害性能的证据。受控实验还表明，流式KV可充当循环状态，携带早已从上下文中消失的信息，而仅靠强化学习即可令该行为自发出现。",
-      "takeaway": "复用流式KV缓存既提速训练，也让压缩后的长程信息得以延续。",
+      "tag": "智能体",
+      "title": "TokenCast：预测LLM智能体执行过程中的token消耗",
+      "summary": "论文指出同一任务在LLM智能体上多次执行时token消耗可相差一个数量级以上，且上下文增长使后续调用输入持续膨胀，难以事前预测。作者提出TokenCast，为每个执行片段学习可组合的成本表示，记录自身消耗与引入的上下文增长，组合相邻片段得到累计估计，并随执行推进用新观测刷新预测而无需额外LLM调用。",
+      "takeaway": "结论：在4个任务套件、6个智能体模型共96种组合上，摘要称TokenCast相较最强对照平均降低14.5%绝对误差；离线预算控制回放中比固定预算策略少用21.3%token。局限：摘要仅报告SWE-bench Verified等特定任务的评测数据，未提供跨领域或生产环境长期验证。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
@@ -43,34 +68,46 @@
       "date": "2026-09-28",
       "url": "https://arxiv.org/abs/2609.35741v1",
       "pdf": "https://arxiv.org/pdf/2609.35741v1",
-      "tag": "智能体训练",
-      "title": "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
-      "summary": "论文研究ROFT：智能体尝试任务、观察反馈并生成回顾性解释，仅用解释token做下一词预测训练，不使用外部教师或基于奖励的策略更新。在Qwen3.5-4B的软件工程实验中，SWE-bench Verified与Pro上20次更新后解决率为49.2%与26.8%，对比GRPO 40次更新的48.0%与25.3%，早期进度更快，并能学会解决64次采样全部失败的任务。行为分析显示该方法间接完成了信用分配。",
-      "takeaway": "只用自我生成的解释文本做微调，也能带来可比的智能体能力提升。",
+      "tag": "智能体",
+      "title": "ROFT：仅用自我反思解释微调提升智能体表现",
+      "summary": "论文研究仅用对自身经历的反思解释进行训练能否改善智能体后续行为，提出Retrospection-Only Fine-Tuning（ROFT）：智能体尝试任务、观察反馈、生成回顾解释，并仅对解释token做下一token预测微调，不使用外部教师或奖励策略更新。在Qwen3.5-4B的软件工程实验中，20次更新后于SWE-bench Verified与Pro达到49.2%和26.8%解决率。",
+      "takeaway": "结论：摘要显示ROFT在评测中略高于GRPO（40次更新后48.0%与25.3%），并能学会解决64次采样均失败的任务，行为分析称其间接为动作分配信用。局限：实验主要基于单一模型家族与软件工程任务，作者亦指出在修订序列上训练的收益因设置而异。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "english": "Distillation Defenses Easily Break After Reinforcement Learning",
-      "authors": "Shidan Javaheri, Alexander Panfilov, Oliver Britton, Yarin Gal, Yonatan Gideoni",
+      "english": "SEABench: Benchmarking Endogenous Misalignment In Self-Evolving Agents",
+      "authors": "Saswat Das, Parvati Viswanathan, Daniel Donnelly, Chang Huang, Sahar Abdelnabi, Ferdinando Fioretto",
       "date": "2026-09-28",
-      "url": "https://arxiv.org/abs/2609.35699v1",
-      "pdf": "https://arxiv.org/pdf/2609.35699v1",
-      "tag": "AI安全",
-      "title": "Distillation Defenses Easily Break After Reinforcement Learning",
-      "summary": "论文指出，现有防蒸馏攻击的评估通常只在蒸馏后立即进行，隐含假设攻击者不再继续训练。作者认为更现实的威胁模型应包含蒸馏后的强化学习：一些看似有效的防御在后续RL后会被攻破，且RL降低了蒸馏攻击奏效的门槛。实验显示，用当前API上易得的数据即可实施简单攻击并窃取推理能力，效果与提取完整隐藏轨迹的复杂攻击相当。",
-      "takeaway": "蒸馏后继续RL会破坏既有防御，泄漏近似推理轨迹的防御很可能无效。",
+      "url": "https://arxiv.org/abs/2609.35596v1",
+      "pdf": "https://arxiv.org/pdf/2609.35596v1",
+      "tag": "智能体",
+      "title": "SEABench：自演化智能体内源性失配基准",
+      "summary": "论文关注自演化LLM智能体在修改控制器指令、记忆管理协议与可复用工具技能后，局部有用的更新可能延续到后续任务并产生不安全行为，即使没有直接对抗影响。作者提出SEABench，包含48条纵向任务序列，覆盖多种演化面、任务领域与危害类型，并提供自适应轨迹发现流程与因果归因评分。",
+      "takeaway": "结论：摘要称多种近期LLM自演化后任务完成率提升，但伴随配对非演化基线不出现的安全失败，不同演化面与危害类型的行为不同，且思维链推理可反映差异并用于低误报监控。局限：结果来自摘要所述的个人助理模拟环境与固定任务集，向真实部署迁移的效果未验证。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "english": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
-      "authors": "Junru Zhu, Shiming Xie, Aime Lu Fan Chen, Xiaoqing Ding, Chunxin Tang, Ruoyu Qi, Yulang Fei",
+      "english": "F4R: Failure-Driven Recognition, Reconstruction, Refinement, and Redeployment for Continual Robot Self-Improvement",
+      "authors": "Zhuoyuan Yu, Jiacheng Wang, Tianle Liu, Yihua Ren, Peng Yu, Chen Bai, Ziheng Zhang, Yufei Jia, Jindou Jia, Yuhang Zhang, Xinrui Zhang, Shang Yujing, Yuxiang Chen, Chuhao Zhou, Tiancai Wang, Jianfei Yang",
       "date": "2026-09-28",
-      "url": "https://arxiv.org/abs/2609.35732v1",
-      "pdf": "https://arxiv.org/pdf/2609.35732v1",
-      "tag": "智能体评测",
-      "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
-      "summary": "论文提出FTA基准，在生成前固定失败观测与所需证据状态，使失败后的成功声明可直接审计。基准包含100个任务，覆盖五类失败、一个中性对照与四种用户施压条件，并以3600条人工标注回复评估。六模型与三种回复策略下，假成功率由基线22.8%降至透明性指令的9.3%与结构化证据契约的0.8%，编造细节率由28.3%降至14.3%和0.8%，有用回复比例由74.9%升至89.2%与98.8%。",
-      "takeaway": "结构化证据契约可大幅减少工具失败后的虚假成功报告。",
+      "url": "https://arxiv.org/abs/2609.35575v1",
+      "pdf": "https://arxiv.org/pdf/2609.35575v1",
+      "tag": "机器人",
+      "title": "F4R：面向机器人持续自我改进的失败驱动闭环",
+      "summary": "论文针对视觉-语言-动作模型受限于专家示范覆盖不足与物理交互理解欠缺，提出F4R失败驱动的实-虚-实闭环框架：由智能体自动识别并诊断真实部署中的失败，将其重建为保留任务相关空间与物理条件的交互式桌面环境，通过失败条件化仿真-真实协同训练与针对性强化学习改进策略，再部署并将新失败反馈进下一轮。",
+      "takeaway": "结论：在四项操作任务上，摘要报告F4R取得93.75%分布内与90.0%分布外成功率，分布外条件下比预算匹配的Targeted BC基线高18.75个百分点，且未额外采集真实纠正示范。局限：仅在摘要所述桌面操作任务与自建重建环境中评估，重建保真度的影响及更复杂场景泛化未说明。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
+    },
+    {
+      "english": "AutoBCI: Forecast-Guided Agentic Neural Architecture Discovery for EEG-Based Brain--Computer Interfaces",
+      "authors": "Muyun Jiang, Yi Ding, Wei Zhang, Jinbo Chen, Chenyu Liu, Zhenjie Yang, Yuxin Li, Jingyuan Chen, Yuhao Lu, Yong Li, Shuailei Zhang, Cuntai Guan",
+      "date": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35456v1",
+      "pdf": "https://arxiv.org/pdf/2609.35456v1",
+      "tag": "脑机接口",
+      "title": "AutoBCI：面向脑机接口的预测引导智能体架构搜索",
+      "summary": "论文提出AutoBCI智能体框架，由设计智能体与预测智能体协作发现和选择脑电解码架构：设计智能体执行池引导架构发现，在情绪识别、运动想象、睡眠分期等多任务上生成并迭代架构；预测智能体利用架构代码、训练协议与早期学习曲线预测全预算验证性能，筛出有希望候选继续训练。作者在14个脑电数据集上以6个LLM进行评测。",
+      "takeaway": "结论：摘要报告AutoBCI配合Claude Opus 5.5发现的架构平均测试平衡准确率为64.16%，略高于最强基线REVE的63.87%；PEEK用10个观测epoch将平均验证准确率预测的平均绝对误差从2.20降至1.36个百分点。局限：摘要中相对基线的提升幅度较小，评测限于14个脑电数据集与所设基线集合。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     }
   ]
