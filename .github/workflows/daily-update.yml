@@ -38,11 +38,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install HTML parser
+        run: python -m pip install beautifulsoup4==4.13.4
       - name: Generate Chinese brief
         if: github.event_name != 'push'
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
         run: python scripts/update_brief.py
       - name: Commit validated brief
         if: github.event_name != 'push'
