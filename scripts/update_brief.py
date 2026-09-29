@@ -16,6 +16,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
+import random
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('Asia/Shanghai')
@@ -55,11 +56,23 @@ def api_call(payload):
     print('API usage:', json.dumps(result.get('usage', {})))
     return json.loads(choice['message']['content'])
 
-def fetch(url):
-    req = urllib.request.Request(url, headers={'User-Agent': 'AI-Morning-Reading/1.0'})
-    with urllib.request.urlopen(req, timeout=25) as r:
-        return r.read(2500000), r.geturl()
 
+
+def fetch(url, max_retries=3):
+    req = urllib.request.Request(url, headers={'User-Agent': 'AI-Morning-Reading/1.0'})
+    for attempt in range(max_retries):
+        try:
+            # 将超时时间从25秒增加到45秒
+            with urllib.request.urlopen(req, timeout=45) as r:
+                return r.read(2500000), r.geturl()
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+            if attempt == max_retries - 1:
+                raise
+            # 遇到429或超时，等待后重试（指数退避）
+            wait = (2 ** attempt) + random.uniform(0, 1)
+            print(f'Retry {attempt + 1}/{max_retries} for {url} after {wait:.1f}s: {type(e).__name__}')
+            time.sleep(wait)
+            
 def published_day(value):
     value = str(value).strip()
     try:
