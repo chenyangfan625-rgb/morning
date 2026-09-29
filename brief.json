@@ -1,101 +1,77 @@
 {
   "updatedDate": "2026-09-29",
-  "paperNote": "截至 2026-09-29 检索，arXiv 已公布 9 月 28 日批次；本期精选论文均于 9 月 25 日实际提交，并在 9 月 28 日工作日批次公开。除 Mutable Transcripts 已被 NeurIPS 2026 接收外，其余均为尚待同行评议的预印本，摘要数值均为作者报告结果。",
-  "scheduleLabel": "已设置每天早上更新 · 北京时间 8:00 前后约一小时",
+  "paperNote": "AI辅助摘要，点击公司官方原文或论文核对；论文日期为arXiv首次提交日期，近期补读单独标注。 官网定向抓取覆盖有限；无新条目不代表全网无更新。",
+  "scheduleLabel": "GitHub 自动晨读 · 北京时间约 08:17 更新（可能延迟）",
   "news": [
     {
-      "tag": "AI 安全 · 国际观点",
+      "tag": "AI",
       "date": "2026-09-28",
-      "source": "Reuters",
-      "title": "教皇 Leo 呼吁严肃对待 AI 毁灭性风险讨论",
-      "summary": "据路透社报道，教皇 Leo 表示，专家关于 AI 可能造成严重乃至生存风险的担忧不应被简单视为“假新闻”，并批评反对任何安全护栏的科技领袖。他主张继续国际对话、研究与负责任创新；这是公共立场与政策倡议，并非新的技术证据或监管决定。",
-      "url": "https://www.reuters.com/world/europe/pope-leo-says-concerns-about-ai-doom-are-not-fake-news-2026-09-28/"
-    },
-    {
-      "tag": "前沿模型 · 资本市场",
-      "date": "2026-09-28",
-      "source": "Reuters",
-      "title": "Anthropic 招股材料披露其迈向前沿 AI 实验室首次上市的路径",
-      "summary": "路透社梳理了 Anthropic 招股材料及其从 2021 年成立到申请上市的发展路径，显示前沿模型竞争正进一步进入公开资本市场。报道中的估值、收入预测与长期经济影响属于公司材料和市场预期，不能视为已实现结果。",
-      "url": "https://www.reuters.com/technology/anthropics-path-ai-startup-industry-defining-ipo-2026-09-28/"
-    },
-    {
-      "tag": "智能体安全 · 评论分析",
-      "date": "2026-09-28",
-      "source": "Reuters Breakingviews",
-      "title": "Nvidia 推出限制和监控智能体行为的安全工具",
-      "summary": "Reuters Breakingviews 评论称，Nvidia 推出开源框架 OpenShell 与面向 BlueField 处理器的 Sentry，用于限制智能体权限、监测异常并在必要时终止行为。工具发布本身已确认，但其能否普遍阻止真实攻击尚未得到独立验证；文章同时指出 Nvidia 推动安全采用也具有扩大算力需求的商业动机。",
-      "url": "https://www.reuters.com/commentary/breakingviews/jensen-huangs-invisible-hand-is-tied-ai-safety-2026-09-28/"
-    },
-    {
-      "tag": "智能体生态 · 已确认发布",
-      "date": "2026-09-25",
-      "source": "Anthropic / Claude",
-      "title": "Claude 开放插件目录提交入口，并提供审核与使用分析",
-      "summary": "Anthropic 为付费 Claude 开发者开放插件目录提交门户，可提交远程 MCP 连接器或由 MCP、Agent Skills 等组成的插件包；平台会自动校验和安全扫描，并在发布后提供安装量与搜索曝光分析。本条为近期保留资讯，日期已明确标注。",
-      "url": "https://claude.com/blog/build-plugins-for-claude"
+      "source": "Google Blog",
+      "title": "The Gifted wins Future Vision XPRIZE",
+      "summary": "谷歌与XPRIZE及Range Media Partners合作的Future Vision XPRIZE公布结果，独立电影人Jeff Synthesized凭《The Gifted》获大奖。影片讲述一名11岁男孩出于爱用代码重建已故母亲的声音与存在，其影响悄然惠及整个社区网络。该片从全球2500多件投稿中选出，作者获10万美元奖金及250万美元长片制作资助，并将通过谷歌100 ZEROS计划推向大银幕。",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize"
     }
   ],
   "papers": [
     {
-      "tag": "大模型 · 推理效率",
-      "date": "2026-09-25",
-      "title": "不直接惩罚长度，仅训练置信度能否让推理模型更早停下？",
-      "english": "Learning to Stop without Learning to Stop: Self-Supervised Confidence Training Improves Reasoning Efficiency",
-      "authors": "Parsa Hosseini, Akasha Tigalappanavara, Sumit Nawathe, Chenrui Fan, Sourya Basu, Genta Indra Winata, Anirban Das, Soheil Feizi, Nima Chitsazan",
-      "status": "arXiv 预印本",
-      "summary": "研究仅用 600 个训练问题，让模型在自身推理轨迹的中间位置预测答案置信度；训练目标不包含长度、效率或停止奖励，推理时也不额外触发早停。作者报告，在 Gemma、Qwen、Nemotron 和 GPT-OSS 的数学、科学与编程基准上，匹配准确率时最多减少 25% 的生成 token。",
-      "takeaway": "阅读关注：元认知监督可能间接带来推理效率，但需核查不同任务上的绝对准确率、训练成本，以及模型是否只是更早形成过度自信。",
-      "url": "https://arxiv.org/abs/2609.31619",
-      "pdf": "https://arxiv.org/pdf/2609.31619"
+      "english": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "authors": "Chaoqian Ouyang, Ling Yue, Libin Zheng, Huanghui Guo, Shengxiang Xu, YiShu Wang, Ran Li, Jian Yin, Shaowu Pan, Shimin Di",
+      "date": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35760v1",
+      "pdf": "https://arxiv.org/pdf/2609.35760v1",
+      "tag": "Token计费",
+      "title": "TokenCast: Forecasting Token Consumption During LLM Agent Execution",
+      "summary": "论文提出TokenCast，为智能体执行的每个片段学习可组合的成本表示，记录自身消耗及其引入的上下文增长，组合相邻片段即可给出累计token预测，并随执行推进用新证据刷新，且无需额外模型调用。在SWE-bench Verified上平均累计预测耗时32.8毫秒；跨4个任务套件与6个模型，96个组合中平均绝对误差相对最强基线平均降低14.5%；离线预算控制回放中比固定预算策略平均少用21.3%的token。",
+      "takeaway": "执行前难以预测的token总消耗可被分段建模并在线刷新，用于预算控制。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "tag": "多智能体 · 规模效应",
-      "date": "2026-09-25",
-      "title": "增加智能体数量为何不一定提升团队决策？",
-      "english": "Multi-agent Scaling Across Disjunctive and Compensatory Tasks",
-      "authors": "Carolina Fortuna, Blaz Bertalanic",
-      "status": "arXiv 预印本",
-      "summary": "论文用 Steiner 群体任务分类分析 13 个开放权重模型、最多 30 个智能体的团队扩展。作者报告，在析取型任务中“至少一个答对”的概率随规模增加 5–20 个百分点，但多数投票几乎没有兑现该潜力；多轮修订的收益与拥有 1 个还是 29 个同伴近似。Fermi 估计中，共享偏差占平方误差约 87%，平均化仅把误差降低约 6%。",
-      "takeaway": "阅读关注：团队规模不是充分条件，任务结构和输出聚合机制决定收益；这可直接用于 LLM-MAS 设计与组织决策类实验。",
-      "url": "https://arxiv.org/abs/2609.31563",
-      "pdf": "https://arxiv.org/pdf/2609.31563"
+      "english": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "authors": "Emiliano Penaloza, Dane Malenfant, Dheeraj Vattikonda, Roger Creus Castanyer, Siddarth Venkatraman, Abhay Puri, Jonathan Light, Matthew James Sargent, Augustine N. Mavor-Parker, Massimo Caccia, Lucas Caccia, Glen Berseth, Esmeralda S. Whitammer, Alessandro Sordoni, Minseon Kim, Marc-Alexandre Côté, Laurent Charlin, Guillaume Lajoie",
+      "date": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35750v1",
+      "pdf": "https://arxiv.org/pdf/2609.35750v1",
+      "tag": "智能体训练",
+      "title": "KV-streams for Efficient Compaction in Agentic Reinforcement Learning",
+      "summary": "论文提出KV-streams，一种可插拔的上下文压缩策略：不再在每次压缩后清空KV缓存，而是将其向前流式传递，从而在保持显存恒定的同时提高训练吞吐。该方法支持三种压缩策略，实现2.6至5倍墙钟训练加速，且未显示出损害性能的证据。受控实验还表明，流式KV可充当循环状态，携带早已从上下文中消失的信息，而仅靠强化学习即可令该行为自发出现。",
+      "takeaway": "复用流式KV缓存既提速训练，也让压缩后的长程信息得以延续。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "tag": "人机协作 · 对话状态",
-      "date": "2026-09-25",
-      "title": "允许用户修改旧对话，能否减少过时信息持续影响模型？",
-      "english": "Mutable Transcripts: Mitigating Context Pollution through Editable Conversation State",
-      "authors": "Dan Barry, Andrew Hines",
-      "status": "arXiv 预印本；NeurIPS 2026 已接收",
-      "summary": "论文提出“可变对话记录”，允许用户通过自然语言编辑请求直接修改历史轮次，而不是不断追加纠正信息。一个含 17 名参与者的受控研究显示，用户在清晰度、信心和易用性上显著偏好该方案，也更少想重新开始会话；示例分析显示其可缩短对话并移除过时上下文。",
-      "takeaway": "阅读关注：结果直接关联持续人机协作中的状态管理，但样本很小，尚不足以说明长期任务表现或复杂组织场景中的稳健性。",
-      "url": "https://arxiv.org/abs/2609.31354",
-      "pdf": "https://arxiv.org/pdf/2609.31354"
+      "english": "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
+      "authors": "Jonathan Light, Christopher Zhang Cui, Jeonghye Kim, Roger Creus Castanyer, Emiliano Penaloza, Zhengyan Shi, Alessandro Sordoni, Marc-Alexandre Côté, Xingdi Yuan, Minseon Kim",
+      "date": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35741v1",
+      "pdf": "https://arxiv.org/pdf/2609.35741v1",
+      "tag": "智能体训练",
+      "title": "Shockingly Simple Self-retrospection Improves Agentic Models Without RL",
+      "summary": "论文研究ROFT：智能体尝试任务、观察反馈并生成回顾性解释，仅用解释token做下一词预测训练，不使用外部教师或基于奖励的策略更新。在Qwen3.5-4B的软件工程实验中，SWE-bench Verified与Pro上20次更新后解决率为49.2%与26.8%，对比GRPO 40次更新的48.0%与25.3%，早期进度更快，并能学会解决64次采样全部失败的任务。行为分析显示该方法间接完成了信用分配。",
+      "takeaway": "只用自我生成的解释文本做微调，也能带来可比的智能体能力提升。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "tag": "人机协作 · 政策协商",
-      "date": "2026-09-25",
-      "title": "模拟利益相关者与形式化论证能否改善人机政策审议？",
-      "english": "OmouAI: Argumentative Human-AI Policy Deliberation with Simulated Personas",
-      "authors": "Stylianos Loukas Vasileiou, Antonio Rago, William Yeoh, Georgina Curto",
-      "status": "arXiv 预印本",
-      "summary": "OmouAI 让不同模拟角色生成政策论点，并将人类和智能体观点组织为共享论证框架；用户可以质疑、补充或修改论点，系统再用确定性的论证语义对照联合国可持续发展目标等外部目标进行评估。其核心贡献是系统设计与可追溯解释机制，摘要未报告受控用户实验效果。",
-      "takeaway": "阅读关注：模拟角色不等同于真实利益相关者；对 LLM-ABM 而言，价值在于把可审计的论证结构与人类监督嵌入仿真，而不是宣称预测真实政策反应。",
-      "url": "https://arxiv.org/abs/2609.31078",
-      "pdf": "https://arxiv.org/pdf/2609.31078"
+      "english": "Distillation Defenses Easily Break After Reinforcement Learning",
+      "authors": "Shidan Javaheri, Alexander Panfilov, Oliver Britton, Yarin Gal, Yonatan Gideoni",
+      "date": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35699v1",
+      "pdf": "https://arxiv.org/pdf/2609.35699v1",
+      "tag": "AI安全",
+      "title": "Distillation Defenses Easily Break After Reinforcement Learning",
+      "summary": "论文指出，现有防蒸馏攻击的评估通常只在蒸馏后立即进行，隐含假设攻击者不再继续训练。作者认为更现实的威胁模型应包含蒸馏后的强化学习：一些看似有效的防御在后续RL后会被攻破，且RL降低了蒸馏攻击奏效的门槛。实验显示，用当前API上易得的数据即可实施简单攻击并窃取推理能力，效果与提取完整隐藏轨迹的复杂攻击相当。",
+      "takeaway": "蒸馏后继续RL会破坏既有防御，泄漏近似推理轨迹的防御很可能无效。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "tag": "管理研究 · LLM 测量",
-      "date": "2026-09-25",
-      "title": "同一公司文本交给不同 LLM，为何会产生不同的实证变量？",
-      "english": "Same Text, Different Numbers: The Divergence of LLM-Based Measures",
-      "authors": "Hamid Boustanifar, Sasan Mansouri",
-      "status": "arXiv 预印本",
-      "summary": "研究让 7 个不同提供商的 LLM 对标普 500 公司业绩电话会文本生成 13 类变量。作者报告，跨模型秩相关平均仅 0.52，共同的文本层差异只解释 34% 的总评分变异；更换模型还会改变下游回归系数的大小、符号与显著性。跨提供商平均可稳定多数变量的排序，但分数水平仍依赖模型组合。",
-      "takeaway": "阅读关注：这对管理与信息系统实证研究非常关键——LLM 生成变量应被视为模型依赖的测量，并进行跨模型验证、集合稳健性和构念效度检验。",
-      "url": "https://arxiv.org/abs/2609.31013",
-      "pdf": "https://arxiv.org/pdf/2609.31013"
+      "english": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
+      "authors": "Junru Zhu, Shiming Xie, Aime Lu Fan Chen, Xiaoqing Ding, Chunxin Tang, Ruoyu Qi, Yulang Fei",
+      "date": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.35732v1",
+      "pdf": "https://arxiv.org/pdf/2609.35732v1",
+      "tag": "智能体评测",
+      "title": "Failure-Transparent Agents: Benchmarking Post-Failure Reporting in Tool-Using Language Models",
+      "summary": "论文提出FTA基准，在生成前固定失败观测与所需证据状态，使失败后的成功声明可直接审计。基准包含100个任务，覆盖五类失败、一个中性对照与四种用户施压条件，并以3600条人工标注回复评估。六模型与三种回复策略下，假成功率由基线22.8%降至透明性指令的9.3%与结构化证据契约的0.8%，编造细节率由28.3%降至14.3%和0.8%，有用回复比例由74.9%升至89.2%与98.8%。",
+      "takeaway": "结构化证据契约可大幅减少工具失败后的虚假成功报告。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     }
   ]
 }
