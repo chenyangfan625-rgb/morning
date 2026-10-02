@@ -17,6 +17,8 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 import random
+import threading
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('Asia/Shanghai')
@@ -33,43 +35,78 @@ def official(url, domains):
             and p.port in (None, 443)
             and any(host == d or host.endswith('.' + d) for d in domains)
             and p.path.strip('/') != '')
-
-def api_call(payload):
+    
+def api_call(payload, max_retries=3):
     key = os.environ.get('DEEPSEEK_API_KEY', '').strip()
     if not key:
         raise RuntimeError('Missing DEEPSEEK_API_KEY repository secret')
     req = urllib.request.Request(API, data=json.dumps(payload).encode(), headers={
         'Authorization': 'Bearer ' + key, 'Content-Type': 'application/json'})
-    try:
-        with urllib.request.urlopen(req, timeout=300) as r:
-            result = json.load(r)
-    except urllib.error.HTTPError as e:
-        try:
-            error = json.loads(e.read()).get('error', {})
-            code = re.sub(r'[^a-zA-Z0-9_ -]', '', str(error.get('code', 'unknown')))[:80]
-        except Exception:
-            code = 'unknown'
-        raise RuntimeError(f'DeepSeek HTTP {e.code}; code={code}; check balance, key and model access') from None
-    choice = result['choices'][0]
-    if choice.get('finish_reason') != 'stop':
-        raise RuntimeError('Model output incomplete; previous brief retained')
-    print('API usage:', json.dumps(result.get('usage', {})))
-    return json.loads(choice['message']['content'])
-
-
-
-def fetch(url, max_retries=3):
-    req = urllib.request.Request(url, headers={'User-Agent': 'AI-Morning-Reading/1.0'})
+    last_reason = 'unknown'
     for attempt in range(max_retries):
         try:
-            # 将超时时间从25秒增加到45秒
-            with urllib.request.urlopen(req, timeout=45) as r:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                result = json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503, 504) and attempt < max_retries - 1:
+                time.sleep(15 * (attempt + 1))
+                continue
+            try:
+                error = json.loads(e.read()).get('error', {})
+                code = re.sub(r'[^a-zA-Z0-9_ -]', '', str(error.get('code', 'unknown')))[:80]
+            except Exception:
+                code = 'unknown'
+            raise RuntimeError(f'DeepSeek HTTP {e.code}; code={code}; check balance, key and model access') from None
+        choice = result['choices'][0]
+        print('API usage:', json.dumps(result.get('usage', {})))
+        if choice.get('finish_reason') == 'stop':
+            return json.loads(choice['message']['content'])
+        last_reason = choice.get('finish_reason')
+        print(f'Model output incomplete ({last_reason}), retry {attempt + 1}/{max_retries}')
+        time.sleep(5 * (attempt + 1))
+    raise RuntimeError(f'Model output incomplete ({last_reason}); previous brief retained')
+
+
+
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+                  '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
+}
+
+_host_locks, _host_last, _host_guard = {}, {}, threading.Lock()
+
+def _throttle(url, interval=2.0):
+    """同一域名串行访问，间隔 interval 秒，避免并发触发站点限流。"""
+    host = urllib.parse.urlsplit(url).hostname or ''
+    with _host_guard:
+        lock = _host_locks.setdefault(host, threading.Lock())
+    with lock:
+        with _host_guard:
+            elapsed = time.monotonic() - _host_last.get(host, 0.0)
+        if elapsed < interval:
+            time.sleep(interval - elapsed)
+        with _host_guard:
+            _host_last[host] = time.monotonic()
+
+def fetch(url, max_retries=4):
+    _throttle(url)
+    req = urllib.request.Request(url, headers=HEADERS)
+    for attempt in range(max_retries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
                 return r.read(2500000), r.geturl()
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+        except urllib.error.HTTPError as e:
+            if e.code == 404 or attempt == max_retries - 1:
+                raise
+            wait = min(30, 3 * (2 ** attempt)) + random.uniform(0, 1.5)
+            print(f'Retry {attempt + 1}/{max_retries} for {url} after {wait:.1f}s: HTTP {e.code}')
+            time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError) as e:
             if attempt == max_retries - 1:
                 raise
-            # 遇到429或超时，等待后重试（指数退避）
-            wait = (2 ** attempt) + random.uniform(0, 1)
+            wait = min(30, 3 * (2 ** attempt)) + random.uniform(0, 1.5)
             print(f'Retry {attempt + 1}/{max_retries} for {url} after {wait:.1f}s: {type(e).__name__}')
             time.sleep(wait)
             
@@ -285,7 +322,7 @@ def main():
                    '论文选择5至8篇，不足则少选，只根据摘要写结论和局限，不推断同行评议状态。'
                    '每条摘要80至150字；没有符合条件的项目用空数组。',
         'required_json_schema': SCHEMA, 'news_candidates': news, 'paper_candidates': papers}
-    generated = api_call({'model': model, 'max_tokens': 8000,
+    generated = api_call({'model': model, 'max_tokens': 16000,
         'response_format': {'type': 'json_object'},
         'messages': [{'role': 'system', 'content': '你是严谨的中文科技编辑。仅根据提供的原文材料输出JSON。'},
                      {'role': 'user', 'content': json.dumps(prompt, ensure_ascii=False)}]})
