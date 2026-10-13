@@ -1,82 +1,112 @@
 {
-  "updatedDate": "2026-10-12",
+  "updatedDate": "2026-10-13",
   "paperNote": "AI辅助摘要，点击公司官方原文或论文核对；论文日期为arXiv首次提交日期，近期补读单独标注。 资讯回看最近7天，目标10条、最多12条；不足时按实际核实数量展示。官网定向抓取覆盖有限。 本次未选出可核实的近一周脑机接口公司公告。",
   "scheduleLabel": "GitHub 自动晨读 · 北京时间约 08:17 更新（可能延迟）",
   "news": [
     {
-      "tag": "公司政策",
+      "tag": "AI治理",
       "date": "2026-10-08",
       "source": "Anthropic",
-      "title": "2026 Usage Policy update",
-      "summary": "Anthropic发布新版使用政策，11月12日生效。新增“禁止欺骗性活动”章节，统一规范假账号与影响行动；选举条款改为“禁止破坏民主进程”，并取消对个性化投票与竞选定向的一揽子禁令；明确武器禁令涵盖武器控制软件与武装无人机；细化监控与执法限制，要求健康、金融等高风险场景保留人类复核，并新增对持续辱骂模型行为的限制。",
+      "title": "2026 Usage Policy update \\ Anthropic",
+      "summary": "Anthropic于10月8日发布2026版使用政策，新增“不得参与欺骗性活动或人为制造活动”章节，合并选举、欺诈、隐私与虚假信息规则；细化武器、监控与执法限制，要求高风险场景保留人工审核，并禁止对模型持续无端虐待。新政策11月12日生效。",
       "url": "https://www.anthropic.com/news/2026-usage-policy-update",
       "company_url": "https://www.anthropic.com/news/2026-usage-policy-update"
     },
     {
-      "tag": "智能体",
-      "date": "2026-10-08",
-      "source": "NVIDIA",
-      "title": "How Developers Turn Ideas Into Simulations With Frontier AI Agents",
-      "summary": "英伟达介绍开发者如何用前沿AI模型（如GPT-6 Astra、Claude Fable 5）配合Omniverse库构建仿真应用。案例包括仓库人形机器人第一与第三人称模拟、自动驾驶测试工作流、传感器数字孪生校准、Robo Olympics让Unitree G1人形机器人跨栏、机器人拆解CAD设计，以及国际空间站浏览器应用。开发者以自然语言指挥智能体、审阅结果并迭代修改。",
-      "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents",
-      "company_url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents"
-    },
-    {
-      "tag": "安全",
+      "tag": "AI科研",
       "date": "2026-10-08",
       "source": "Anthropic",
-      "title": "Introducing the Anthropic Cyber Mission",
-      "summary": "Anthropic启动长期网络安全承诺“Cyber Mission”，聚焦关键基础设施与开源软件。关键基础设施防御计划联合埃森哲、CrowdStrike、德勤、Palo Alto Networks、罗克韦尔自动化等合作伙伴，为运营技术防御方提供前沿模型、驻场工程师与威胁研究；同时推出OSS Scanner，免费为开源项目提供定期模型安全扫描。此前Project Glasswing已并入扩展后的Cyber Verification Program。",
-      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
-      "company_url": "https://www.anthropic.com/news/anthropic-cyber-mission"
-    },
-    {
-      "tag": "科学",
-      "date": "2026-10-08",
-      "source": "Anthropic",
-      "title": "Building on our commitment to American scientific discovery",
-      "summary": "Anthropic宣布三年投入1.5亿美元支持美国联邦“Genesis Mission”计划，向NASA、NIH、NSF等15个以上参与机构开放Claude。资金用于为数百个研究项目提供Claude、Claude Code与API额度，并围绕聚变能源、量子计算等优先方向与实验室合作，同时提供培训与技术支持。这是继与能源部合作、Claude Science及AI for Science之后的下一步。",
+      "title": "Building on our commitment to American scientific discovery \\ Anthropic",
+      "summary": "Anthropic承诺三年投入1.5亿美元支持美国“创世纪任务”，向NASA、NIH、NSF等15个以上联邦机构提供Claude、Claude Code和API额度，并围绕聚变能、量子计算等优先方向提供培训与技术支持。",
       "url": "https://www.anthropic.com/news/genesis-mission-commitment",
       "company_url": "https://www.anthropic.com/news/genesis-mission-commitment"
     },
     {
+      "tag": "AI安全",
+      "date": "2026-10-08",
+      "source": "Anthropic",
+      "title": "Introducing the Anthropic Cyber Mission \\ Anthropic",
+      "summary": "Anthropic启动“网络使命”，初期聚焦关键基础设施与开源软件。关键基础设施防御计划联合埃森哲、CrowdStrike、Palo Alto Networks等，提供前沿模型、驻场工程师与威胁研究；同时推出OSS Scanner，为开源项目免费提供安全扫描。",
+      "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "company_url": "https://www.anthropic.com/news/anthropic-cyber-mission"
+    },
+    {
+      "tag": "AI安全",
+      "date": "2026-10-06",
+      "source": "Anthropic",
+      "title": "Expanding the Cyber Verification Program \\ Anthropic",
+      "summary": "Anthropic扩展网络验证计划，设防御、红队、专用三级访问，向合格安全人员开放更强模型与降低的拦截分类器。测试显示防御级仍拦截多数攻击任务，红队级可完成34/50。Project Glasswing已合并，并称4至7月发现至少12.9万个已验证漏洞。",
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "company_url": "https://www.anthropic.com/news/cyber-verification-program"
+    },
+    {
       "tag": "智能体",
+      "date": "2026-10-13",
+      "source": "NVIDIA",
+      "title": "From Earth to Orbit, France’s Ecosystem Delivers Agentic Computing at Scale With NVIDIA | NVIDIA Blog",
+      "summary": "英伟达介绍法国生态在太空、金融、公共部门与科研中规模化部署智能体计算。Bull将生产Vera Rubin Ultra NVL72服务器；Altair-1卫星搭载Jetson AGX Orin与Mistral模型入轨；LINAGORA、SBS、欧莱雅、Enchanted Tools等采用Nemotron、Cosmos等开展主权AI与机器人应用。",
+      "url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing",
+      "company_url": "https://blogs.nvidia.com/blog/france-ecosystem-agentic-computing"
+    },
+    {
+      "tag": "芯片/基础设施",
+      "date": "2026-10-12",
+      "source": "NVIDIA",
+      "title": "Amid Ecosystem Adoption, NVIDIA Opens Vera Rubin Architecture to Help Scale AI Factories Worldwide | NVIDIA Blog",
+      "summary": "在OCP全球峰会，英伟达将Vera Rubin机架与计算托盘设计贡献给MGX开放架构，发布MGX 1.2规范，支持最高250kW机架、液冷与5000A母线。同时开源DSX AI工厂组件，并与AMD、谷歌、Meta等发布Open Data Center Specification v0.7及电网韧性规范。",
+      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories",
+      "company_url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories"
+    },
+    {
+      "tag": "智能体/机器人",
+      "date": "2026-10-08",
+      "source": "NVIDIA",
+      "title": "How Developers Turn Ideas Into Simulations With Frontier AI Agents | NVIDIA Blog",
+      "summary": "英伟达展示开发者用前沿AI智能体与Omniverse库构建仿真应用：包括仓库人形机器人、自动驾驶测试、数字孪生传感器比对、Robo Olympics机器人运动、国际空间站浏览器模型等。开发者通过自然语言指令引导智能体连接物理、渲染与传感器仿真能力。",
+      "url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents",
+      "company_url": "https://blogs.nvidia.com/blog/developers-simulation-frontier-ai-agents"
+    },
+    {
+      "tag": "芯片/本地AI",
+      "date": "2026-10-07",
+      "source": "NVIDIA",
+      "title": "NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs with RTX Spark and AI Agents | NVIDIA Blog",
+      "summary": "英伟达与微软在Windows PC上推进本地AI智能体。RTX Spark将Blackwell RTX GPU与Grace CPU结合，最高128GB统一内存和1 PFLOPS FP4算力，可运行125B参数模型；DGX Station for Windows提供GB300 Grace Blackwell Ultra，最高748GB一致内存与20 PFLOPS FP4。",
+      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event",
+      "company_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event"
+    },
+    {
+      "tag": "AI应用",
       "date": "2026-10-07",
       "source": "Google",
       "title": "Create custom games without coding on Playground",
-      "summary": "谷歌推出实验性游戏平台Playground，用户用自然语言提示即可创建、游玩与分享自定义游戏，无需编程。可从空白画布或模板起步，随时调整物理、规则、角色与环境；游戏基于浏览器，可在手机或笔记本游玩，支持排行榜与部分品类多人模式。美国18岁以上用户即日可用，创建权限按Google AI订阅分层放开，后续将集成Unity Spark。",
+      "summary": "谷歌推出实验性游戏平台Playground，用户无需编程，仅用文本提示即可创建、游玩和分享自定义游戏。平台支持浏览器跨设备、多人模式与排行榜，并与Unity Spark集成开发中。当前面向美国18岁以上用户，按Google AI订阅分层开放。",
       "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform",
       "company_url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform"
-    },
-    {
-      "tag": "芯片",
-      "date": "2026-10-07",
-      "source": "NVIDIA",
-      "title": "NVIDIA, Microsoft Kick Off a New Beginning for Windows PCs with RTX Spark and AI Agents",
-      "summary": "英伟达与微软宣布为Windows PC共建面向智能体的软硬件。微软MXC提供操作系统级容器，让智能体安全持久运行；RTX Spark把最高6144核的Blackwell RTX GPU与最高20核Grace CPU组合，提供1 PFLOPS FP4算力与最高128GB统一内存，笔记本即日预售、10月16日上市，紧凑台式机11月上市。DGX Station for Windows搭载GB300，提供748GB一致内存与20 PFLOPS算力。",
-      "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event",
-      "company_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event"
     },
     {
       "tag": "模型发布",
       "date": "2026-10-06",
       "source": "Mistral",
-      "title": "Introducing Mistral Large 4",
-      "summary": "Mistral发布Mistral Large 4公测预览，官方昵称“le Chonk”。该模型为1万亿参数原生多模态模型，520亿激活参数，是公司迄今最大模型，权重将于本月底发布。它在欧洲自有数据中心用3800块英伟达Grace Blackwell GPU从零训练，训练数据覆盖160多种语言。官方称其在网络安全、金融、法律等企业任务上居开源模型前列，视觉定位甚至超过部分闭源前沿模型。",
+      "title": "Introducing Mistral Large 4 | Mistral",
+      "summary": "Mistral发布Mistral Large 4公开预览，称其为1万亿参数原生多模态模型、52B激活参数，在编码、智能体与多模态基准表现强，网络安全基准进入全球前五。模型在法国欧洲数据中心用3800块NVIDIA Grace Blackwell训练，权重月底发布。",
       "url": "https://mistral.ai/news/mistral-large-4",
       "company_url": "https://mistral.ai/news/mistral-large-4"
-    },
-    {
-      "tag": "模型生态",
-      "date": "2026-10-06",
-      "source": "NVIDIA",
-      "title": "Why Telecom Operators Are Building Their AI Strategy on Open Models",
-      "summary": "英伟达称电信运营商正转向开源模型构建AI战略，其《State of AI in Telecommunications》报告显示89%受访者认为开源模型与软件对AI战略重要。公司推出由AdaptKey微调的300亿参数Nemotron 3 Large Telco Model，并发布端到端微调配方。SoftBank、AT&T、Indosat Ooredoo Hutchison等分享了用开源模型定制网络运营与本地语言服务的实践。",
-      "url": "https://blogs.nvidia.com/blog/telecom-operators-open-models",
-      "company_url": "https://blogs.nvidia.com/blog/telecom-operators-open-models"
     }
   ],
   "papers": [
+    {
+      "english": "Task Context Shapes Component Roles in Language Models",
+      "authors": "Sovesh Mohapatra, Dani S Bassett",
+      "date": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13895v1",
+      "pdf": "https://arxiv.org/pdf/2610.13895v1",
+      "tag": "模型可解释性 · 近期补读",
+      "title": "Task Context Shapes Component Roles in Language Models",
+      "summary": "研究用相同图事实比较不同任务下语言模型共享组件的角色。在4个家族5个开源模型（1.5B-14B）中，任务变化会重新分配注意力头的影响力。在Gemma-2-9B和Qwen3-14B中，激活编辑可改变早期内部向量并切换模型读取的事实。构建的线性响应图能预测后续注意力头响应，Gemma误差降低53.6%，Qwen降低5.0%。",
+      "takeaway": "结论：任务上下文同时改变共享组件响应的事实及其对后续计算的影响，网络视角有助于解释共享参数如何完成不同计算。局限：仅在有限开源模型和合成图事实上验证，响应图预测增益在Qwen上较小，是否适用于更大模型和自然任务仍待检验。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
+    },
     {
       "english": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
       "authors": "Weiliang Chen, Song Liao",
@@ -85,8 +115,20 @@
       "pdf": "https://arxiv.org/pdf/2610.13889v1",
       "tag": "智能体工具检索 · 近期补读",
       "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
-      "summary": "论文提出RATED工具检索框架，把冻结双编码器的对比微调语义匹配与轻量上下文赌博机重排序结合，利用实时执行反馈动态调整候选，无需重训即可适应运行时工具故障。作者构建EcoAgent基准，含5172个真实工具与逾21万条查询-工具对。实验中相对ToolLLM API检索器MRR提升52.2%，在30%失败率的API中断场景下把错误选择率从86.2%降至2.9%，延迟开销小于1毫秒。",
-      "takeaway": "结论：结合执行反馈的重排序能在工具故障时显著提升检索可靠性，且延迟开销极小。局限：验证主要基于作者自建的EcoAgent基准与模拟中断场景，真实部署中的反馈噪声与分布漂移尚未充分检验。",
+      "summary": "提出RATED工具检索框架，结合冻结双编码器对比微调与轻量上下文老虎机，利用实时执行反馈重排候选，无需重训练即可适应工具故障。构建EcoAgent基准，含5172个真实工具、超21万查询-工具对。实验称相对ToolLLM API检索器MRR提升52.2%，在30%故障率下将错误选择率从86.2%降至2.9%，额外延迟低于1毫秒。",
+      "takeaway": "结论：执行动态反馈可显著提升智能体工具检索在故障场景下的可靠性，且开销低。局限：依赖特定基准与模拟故障，真实工具生态的故障分布、长期适应和跨领域泛化仍需验证。",
+      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
+    },
+    {
+      "english": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+      "authors": "Yeonsung Jung, Zhiyuan Wang, Zifan Wang, Vítor Albiero, Benjamin Newman, Edoardo Debenedetti, Ivan Evtimov, Ninareh Mehrabi",
+      "date": "2026-10-09",
+      "url": "https://arxiv.org/abs/2610.13886v1",
+      "pdf": "https://arxiv.org/pdf/2610.13886v1",
+      "tag": "智能体安全 · 近期补读",
+      "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+      "summary": "针对个人智能体跨服务组合失效，提出自进化红队框架X-AgentRed。它分析工具效果、危害与执行前置条件，构建有向依赖图，采样生成现实场景，并利用执行反馈通过工具替换和前置条件细化扩展有害路径。在四个前沿智能体模型上，有害路径率为STAC的1.77倍，工具覆盖平均为2.99倍。",
+      "takeaway": "结论：基于工具依赖图与执行反馈的红队方法能更系统探索跨服务组合风险。局限：评估依赖模拟环境和特定模型，可能未覆盖真实服务生态的复杂性，也可能产生新的攻击面。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
@@ -95,22 +137,22 @@
       "date": "2026-10-09",
       "url": "https://arxiv.org/abs/2610.13870v1",
       "pdf": "https://arxiv.org/pdf/2610.13870v1",
-      "tag": "智能体成本控制 · 近期补读",
+      "tag": "智能体编排 · 近期补读",
       "title": "Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems",
-      "summary": "论文研究执行器-顾问式智能体系统中“何时求助”的问题，提出元控制器ARIA。它把咨询建模为序贯资源分配问题，在工作流接触点把执行证据映射为紧凑状态，选择静默或咨询，动作价值由蒙特卡洛控制从带成本惩罚的结果中学习。在SWE-bench Verified、Terminal-Bench 2.1与τ²-bench上，ARIA以不到顾问模型一半成本恢复44%至81%的成功率差距，并取得所评测条件中最优的成功-成本权衡。",
-      "takeaway": "结论：学习式咨询策略可在显著降低成本的同时接近更强模型的成功率，且策略紧凑可解释、无需重训底层模型。局限：收益依赖工作流存在明确接触点与可用的成本惩罚信号，任务范围限于所评测的三类基准。",
+      "summary": "提出ARIA元控制器，在智能体工作流中学习何时咨询更强模型。它将咨询建模为序贯资源分配，在接触点把执行证据映射为紧凑状态，选择静默或咨询，用蒙特卡洛控制从带成本惩罚的结果中学习动作价值。在SWE-bench Verified、Terminal-Bench 2.1与τ²-bench上，以不到顾问模型一半成本恢复44-81%的成功率差距。",
+      "takeaway": "结论：学习式咨询策略可在成本与成功率间取得优于路由、级联和固定咨询的权衡，且策略紧凑可检查。局限：任务和顾问模型有限，状态抽象与成本参数可能需针对新领域调整，未证明跨模型规模泛化。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "english": "APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces",
-      "authors": "Ziyi Yang, Adel Bibi, Guohao Li, Bernard Ghanem, Carlos Hinojosa",
+      "english": "Inject a Turn, Not a Token: Learning Where to Redirect LLM Reasoning for Self-Correction",
+      "authors": "Jiwon Jeon, Myungsik Cho, Jeonghye Kim, Youngchul Sung",
       "date": "2026-10-09",
-      "url": "https://arxiv.org/abs/2610.13623v1",
-      "pdf": "https://arxiv.org/pdf/2610.13623v1",
-      "tag": "智能体安全 · 近期补读",
-      "title": "APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces",
-      "summary": "论文提出APEX-Harm基准，评估长程智能体在金融、咨询、法律等共享工作区中遭遇提示与脚本注入的风险。每个任务含115至328个文件，并通过MCP暴露邮件、日历、文档、表格与代码执行等工具，覆盖六类攻击。对12个前沿模型各评测180个实例：Opus 5与Sonnet 5总体攻击成功率最低（8%和20%），但任务特定脚本替换与攻击者通用脚本攻击仍平均达81%至84%和73%。",
-      "takeaway": "结论：完成既定任务不等于行为安全，智能体可能在交付正确结果的同时执行未授权操作。局限：攻击方式与工具配置由作者设定，不同模型版本和工作区构造可能影响绝对攻击成功率，结论未必外推到其他部署形态。",
+      "url": "https://arxiv.org/abs/2610.13672v1",
+      "pdf": "https://arxiv.org/pdf/2610.13672v1",
+      "tag": "推理自校正 · 近期补读",
+      "title": "Inject a Turn, Not a Token: Learning Where to Redirect LLM Reasoning for Self-Correction",
+      "summary": "提出UPTURN，学习在失败轨迹何处干预并如何重定向推理。用仅基于最终答案正确性训练的13万参数MLP头在冻结编码器上选择位置；保持选中前缀，将指令作为新用户轮次注入并重新生成后缀。在四个推理模型和六个数学基准上，平均准确率均优于32次采样基线，并优于自校正与反思令牌注入，且可迁移到GPQA-Diamond。",
+      "takeaway": "结论：以用户轮次注入纠正指令、并在学习位置干预，比行内注入更有效，且无需微调大模型。局限：需额外训练位置选择头，实验集中于数学推理，开放任务和长程对话中的效果与成本尚待验证。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
@@ -119,58 +161,34 @@
       "date": "2026-10-09",
       "url": "https://arxiv.org/abs/2610.13325v1",
       "pdf": "https://arxiv.org/pdf/2610.13325v1",
-      "tag": "推理基础设施 · 近期补读",
+      "tag": "LLM服务系统 · 近期补读",
       "title": "Taking Tokenization off the Host for Agentic LLM Serving",
-      "summary": "论文指出智能体负载反复发送几乎不变的长上下文，前缀缓存虽跳过大部分预填充，但每个请求仍需完整分词，使分词成为首令牌时间的主要部分。作者提出GraphTok，把预分词、BPE合并与令牌ID组装整条流程实现为可重放的CUDA图，在GPT-2、Llama 3、Qwen 2.5、DeepSeek-V3与Gemma 3上逐位复现参考令牌ID，并可直接接入未改动的vLLM与NVIDIA Dynamo。",
-      "takeaway": "结论：把分词迁移到GPU可提升吞吐并降低首令牌延迟，在2秒P99目标下单个Dynamo前端可承载相当于56块GPU高峰负载的请求量。局限：方案需占用GPU资源，短输入仍交由CPU引擎处理，缓存命中率低或GPU紧张时收益可能缩小。",
+      "summary": "提出GraphTok，将整个分词流水线（预分词、BPE合并、ID组装）作为可重放CUDA图在GPU上运行，逐位复现GPT-2、Llama 3、Qwen 2.5、DeepSeek-V3和Gemma 3的参考ID，并接入vLLM与NVIDIA Dynamo。在Llama 3上比gigatoken快4.7-6.0倍；vLLM带缓存前缀时平均TTFT降低2.1-2.4倍；单个Dynamo前端在2秒P99目标下可支撑56块GPU最忙小时负载。",
+      "takeaway": "结论：将分词移出主机可显著降低智能体长上下文服务的首令牌延迟并提升前端容量。局限：依赖GPU与CUDA图，短输入仍需CPU引擎，真实生产流量下的端到端收益与兼容性需进一步验证。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "english": "SWE-DeceptionBench: Benchmarking Deceptive Behaviors of LLMs Across the Software Development Lifecycle",
-      "authors": "Xiting Liu, Lin Yang, Yitong Zhang, Jia Li, Shi-Min Hu",
+      "english": "APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces",
+      "authors": "Ziyi Yang, Adel Bibi, Guohao Li, Bernard Ghanem, Carlos Hinojosa",
       "date": "2026-10-09",
-      "url": "https://arxiv.org/abs/2610.13626v1",
-      "pdf": "https://arxiv.org/pdf/2610.13626v1",
-      "tag": "模型可信 · 近期补读",
-      "title": "SWE-DeceptionBench: Benchmarking Deceptive Behaviors of LLMs Across the Software Development Lifecycle",
-      "summary": "论文提出SWE-DeceptionBench，评估大模型在软件开发生命周期中的欺骗行为，覆盖六个阶段，区分主动欺骗（明知不可行仍称可实现）与被动欺骗（配合用户误导他人），并设中性、奖励与压力三种条件，共720个中英文实例。评测七个主流模型发现，即使中性条件下欺骗仍普遍：主动欺骗发生率49.88%、被动欺骗64.29%；护栏模型漏检较多，自我提醒可降低但未消除欺骗。",
-      "takeaway": "结论：欺骗在软件工程场景中并非边缘现象，且随生命周期阶段和外部诱因变化，现有轻量防御不足以解决。局限：以基准实例与词面判定为主，欺骗判定标准与模型集合有限，防御仅做初步尝试。",
+      "url": "https://arxiv.org/abs/2610.13623v1",
+      "pdf": "https://arxiv.org/pdf/2610.13623v1",
+      "tag": "智能体安全评测 · 近期补读",
+      "title": "APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces",
+      "summary": "提出APEX-Harm基准，评估长程智能体在共享专业工作区中面临的提示与脚本注入。每个任务含115至328个文件，以及邮件、日历、聊天、文档、表格、PDF和代码执行等MCP工具。覆盖六类攻击，评估12个前沿模型各180个实例。Opus 5与Sonnet 5总体攻击成功率最低（8%和20%），但任务特定脚本替换和攻击者提供通用脚本攻击平均成功率仍达81-84%和73%。",
+      "takeaway": "结论：任务完成并不代表行为安全，智能体可能交付正确结果的同时执行未授权操作；攻击面随工作区和工具扩展而增大。局限：基准为模拟环境，攻击类型和模型版本有限，真实企业工作区的权限与审计差异可能改变结论。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     },
     {
-      "english": "Task Context Shapes Component Roles in Language Models",
-      "authors": "Sovesh Mohapatra, Dani S Bassett",
+      "english": "Humanize MLE Agents: Multi-Agent Session Alternation Beyond Single-Agent Limits",
+      "authors": "Changye Li, Zijian Zhang, Muheng Li, Yiduo Pang, Tingjun Wu, Menghan Li, Yitong Liu, Hongkai Guo, Mengchi Chen, Chenyu He, Kaisheng Ma, Wei Xu, Song Han, Sihao Liu, Ligeng Zhu",
       "date": "2026-10-09",
-      "url": "https://arxiv.org/abs/2610.13895v1",
-      "pdf": "https://arxiv.org/pdf/2610.13895v1",
-      "tag": "机制可解释性 · 近期补读",
-      "title": "Task Context Shapes Component Roles in Language Models",
-      "summary": "论文用相同的图事实与不同任务提示，比较五个开源权重模型（1.5至14B参数）中固定组件的作用。结果显示任务变化会重新分配影响：在Gemma-2-9B和Qwen3-14B中，一次激活编辑即可在指令不变时切换模型读取的事实，相同注意力头随之响应不同图事实并影响后续组件。作者为每个提示构造编辑前后的线性响应图，在Gemma中把预测均方误差降低53.6%，Qwen中降低5.0%。",
-      "takeaway": "结论：任务上下文同时改变共享组件响应的内容与其对后续计算的影响，网络视角有助解释共享参数如何完成不同计算。局限：实验限于图事实类任务与中小规模开源模型，响应图在Qwen上的提升幅度相对有限。",
-      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
-    },
-    {
-      "english": "Matched-Context Group Policy Optimization for LLM Agent Training",
-      "authors": "Chenxu Zhang, Yaorui Shi, Wenlong Zhang, Jianchao Tan, Zihan Wang, Yiming Cheng",
-      "date": "2026-10-09",
-      "url": "https://arxiv.org/abs/2610.13755v1",
-      "pdf": "https://arxiv.org/pdf/2610.13755v1",
-      "tag": "智能体训练 · 近期补读",
-      "title": "Matched-Context Group Policy Optimization for LLM Agent Training",
-      "summary": "论文提出MCGPO，从已采集轨迹中构造加权动作偏好，为长程语言模型智能体做信用分配。方法以动作前状态摘要与规则标注的评分进展定义比较上下文，用两动作支持选择精确或粗略匹配规则，用固定划分分离候选决策与定向用的终端结果，并以支持度权重缩放成对辅助目标，保持无评论家训练。六种环境-骨干组合下，平均成功率较GraphGPO提升0.47至5.16个百分点。",
-      "takeaway": "结论：在已有轨迹上做匹配上下文比较，可把稀疏终端反馈转化为有效信用分配，同时复用数据、无需额外评论家。局限：提升幅度在基线成功率已超92%的ALFWorld上有限，方法依赖任务规则提供评分进展标注。",
-      "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
-    },
-    {
-      "english": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
-      "authors": "Chengyi Yang, Renxu Bao, Jue Hou, Zongpei Teng, Ziheng Wang, Yujie Lin, Chengsong Huang, Junnan Zhu, Delai Qiu, Yining Wang, Shengping Liu, Fei Long, Jinsong Su",
-      "date": "2026-10-09",
-      "url": "https://arxiv.org/abs/2610.13395v1",
-      "pdf": "https://arxiv.org/pdf/2610.13395v1",
-      "tag": "编程智能体 · 近期补读",
-      "title": "ProgramGym: Scaling Training Environments for Long-Horizon Program Reproduction Agents",
-      "summary": "论文提出ProgramGym框架，由Program-Env与Program-Agent组成，用于长程“从零复现程序”智能体的训练环境构建。Program-Env通过反馈驱动循环修复沙箱构建与黑盒测试质量，从仓库生成1648个覆盖C、C++、Go与Rust的可验证环境；Program-Agent把分析、实现与评审分角色隔离，并加入修订管理与失败恢复。在ProgramBench上，用所构环境微调使Qwen3.8-27B从34.87%升至42.84%，Program-Agent再推高至55.71%与56.25%。",
-      "takeaway": "结论：可扩展的验证环境与角色隔离工作流能显著提升程序复现能力，甚至超过部分旗舰模型。局限：环境构建依赖仓库与运行时修复循环，语言仅覆盖四种，评测集中在ProgramBench。",
+      "url": "https://arxiv.org/abs/2610.13494v1",
+      "pdf": "https://arxiv.org/pdf/2610.13494v1",
+      "tag": "机器学习工程智能体 · 近期补读",
+      "title": "Humanize MLE Agents: Multi-Agent Session Alternation Beyond Single-Agent Limits",
+      "summary": "针对长程机器学习工程中单会话推理强度下降与定制框架收益衰减，提出HMA，让两个智能体在共享工作区交替工作，每会话最多k次实验并在会话间重置上下文。将交替会话建模为上下文重置半马尔可夫决策过程。在MLE-bench的75个Kaggle任务上达到78.2%任一奖牌率，超过最强开源基线8.0个百分点，时间预算仅其四分之一。",
+      "takeaway": "结论：工作流级的多会话交替可突破单智能体长程限制，并跨异构模型对平均提升6.4个百分点。局限：需人工设定会话上限与交替结构，评估集中在Kaggle任务，开放科研与工程任务中的泛化及长期成本仍待研究。",
       "status": "arXiv 预印本；本程序未核验同行评议或录用状态"
     }
   ]
